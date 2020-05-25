@@ -40,7 +40,7 @@ namespace _Nuevo.WebUI.BackgroundService
             do
             {
                 await Process();
-                await Task.Delay(10000, stoppingToken); //5 seconds delay
+                await Task.Delay(10000, stoppingToken);
             }
             while (!stoppingToken.IsCancellationRequested);
         }

@@ -61,7 +61,7 @@ namespace _Nuevo.WebUI.BackgroundService
                 {
                     if (statuLink.IsSendAnEmail == false)
                     {
-                        _emailSender.Send("emre@maama.me", "Error Link :" + target.Url,
+                        _emailSender.Send("emre@emreshn.com", "Error Link :" + target.Url,
                             "Error Code : " + (int)response.StatusCode + "Info : " + response.StatusCode + "<br/><br/> " + "Target Id :" + target.Id);
                     }
                     statuLink.Code = ((int)response.StatusCode).ToString();
