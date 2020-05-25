@@ -36,3 +36,10 @@
 2020-05-26 02:29:29.5807 INFO TargetController | Added New Target : Hepsiburada
 2020-05-26 02:30:00.6482 INFO TargetController | Added New Target : Sahibinden
 2020-05-26 02:30:34.9278 INFO TargetController | Added New Target : Facebook
+2020-05-26 02:40:32.6577 INFO TargetController | Added New Target : Bittrex
+2020-05-26 02:41:08.7246 INFO TargetController | Added New Target : Cryptocompare
+2020-05-26 02:41:52.7912 INFO TargetController | Added New Target : Bootstrap
+2020-05-26 02:42:28.1011 INFO TargetController | Added New Target : Udemy
+2020-05-26 02:43:19.7426 INFO TargetController | Added New Target : Codebeautify
+2020-05-26 02:47:23.1381 INFO TargetController | Added New Target : Youtube
+2020-05-26 02:47:43.2592 INFO TargetController | Added New Target : Netflix
