@@ -103,7 +103,7 @@ else
                 let elementData = $(event.relatedTarget);
                 let id = elementData.data("userid");
                 $("#btn_Remove").click(function () {
-                    $.ajax({
+                    window.$.ajax({
                         type: "Get",
                         url: "./User/Delete",
                         data: { id: id },
@@ -113,7 +113,6 @@ else
                             window.location.reload();
                         },
                         error: function (error) {
-                            alert(error.statusText);
                         }
                     });
                 });

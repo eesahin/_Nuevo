@@ -25,7 +25,6 @@ namespace _Nuevo.DataAccsess.Concrete.Repositories
             result = result.Include(u => u.Status).Include(u => u.User);
             return result.ToList();
         }
-
         public List<Target> GetListForWork()
         {
             using var context = new NuevoContext();

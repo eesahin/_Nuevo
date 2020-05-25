@@ -40,7 +40,6 @@ namespace _Nuevo.WebUI
             services.AddSingleton<IHostedService, ScheduleTask>();
             services.AddScoped<IEmailSender, EmailSender>();
         }
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager, ICustomLogger logger)
         {
             if (env.IsDevelopment())

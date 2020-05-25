@@ -93,5 +93,12 @@ namespace _Nuevo.WebUI.Areas.Administrator.Controllers
             }
             return View(model);
         }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var model = _userManager.Users.First(u => u.Id == id);
+            _userManager.DeleteAsync(model);
+            return Json(null);
+        }
     }
 }

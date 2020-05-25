@@ -40,7 +40,6 @@ namespace _Nuevo.Business.Concrete
         {
             return _targetDal.GetListForWork();
         }
-
         public List<Target> GetListForHomePage()
         {
             return _targetDal.GetListForHomePage();

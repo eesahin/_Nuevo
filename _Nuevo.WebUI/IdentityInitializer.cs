@@ -16,17 +16,17 @@ namespace _Nuevo.WebUI
             {
                 await roleManager.CreateAsync(new AppRole { Name = "Administrator" });
             }
-            var adminUser = userManager.FindByNameAsync("eesahin");
+            var adminUser = userManager.FindByNameAsync("Nuevo");
             if (adminUser.Result == null)
             {
                 AppUser user = new AppUser
                 {
-                    Name = "Emre",
-                    Surname = "Şahin",
-                    UserName = "eesahin",
-                    Email = "emre@emreshn.com"
+                    Name = "Nuevo",
+                    Surname = "softwarehouse",
+                    UserName = "Nuevo",
+                    Email = "info@nuevo.com.tr"
                 };
-                await userManager.CreateAsync(user, "1");
+                await userManager.CreateAsync(user, "123456");
                 IEnumerable<string> data = new List<string>
                 {
                     "Administrator"
