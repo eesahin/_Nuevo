@@ -9,7 +9,7 @@ namespace _Nuevo.DataAccsess.Concrete.EntityFrameworkCore.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=.;database=NuevoDB;trusted_connection=true;");
+            optionsBuilder.UseSqlServer("Server=ikaros.alastyr.com;Database=vebsites_NuevoCore;User Id=vebsites_maama;Password=@Be3de9;");
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder builder)
