@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@{
+    string active = string.Empty;
+    if (TempData["Active"] != null)
+    {
+        active = TempData["Active"].ToString();
+    }
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title | Nuevo</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+    <link href="~/lib/twitter-bootstrap/css/simple-sidebar.css" rel="stylesheet" />
+    <link href="~/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="~/css/summernote.min.css" rel="stylesheet" />
+    <link href="~/lib/twitter-bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="~/dataTable/css/datatables.min.css" rel="stylesheet" />
+    <link href="~/lib/bootswatch/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="border border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <img class="mb-1 h-75" src="~/img/Logo_Picture.png" alt="">
+            </div>
+            <div class="list-group list-group-flush mt-2">
+                <a asp-action="Index" asp-controller="Home" asp-area="Administrator" class="list-group-item list-group-item-action @(active=="Home" ?  "active": "")"><i class="fas fa-tasks mr-2"></i>Home</a>
+                <a asp-action="Index" asp-controller="Target" asp-area="Administrator" class="list-group-item list-group-item-action @(active=="Target" ?  "active": "")"><i class="far fa-newspaper mr-2"></i>Targets</a>
+                <a asp-action="Index" asp-controller="User" asp-area="Administrator" class="list-group-item list-group-item-action @(active=="User" ?  "active": "")"><i class="fas fa-users mr-2"></i>Users</a>
+                <a asp-action="LogOut" asp-controller="Home" asp-area="" class="list-group-item list-group-item-action @(active=="LogOut" ?  "active": "")"><i class="fas fa-sign-out-alt mr-2"></i>Log Out</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+                <button class="btn btn-outline-primary btn-sm" id="menu-toggle"><i class="fas fa-exchange-alt mr-2"></i> Menu</button>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Welcome ,<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @User.Identity.Name
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-action="LogOut" asp-controller="Home" asp-area="">Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/font-awesome/js/all.min.js"></script>
+    <script src="~/dataTable/js/datatables.min.js"></script>
+    @RenderSection("JavaScript", false)
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

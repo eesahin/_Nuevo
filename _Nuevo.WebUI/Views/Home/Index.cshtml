@@ -1,0 +1,20 @@
+﻿@model AppUserSignInDto
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SignInLayout.cshtml";
+}
+<form class="form-signin" asp-action="Login" asp-controller="Home">
+    <img class="mb-4 h-75" src="~/img/Logo_Picture.png" alt="">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Username Or Email</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Username" asp-for="Username" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" asp-for="Password" required>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" asp-for="RememberMe"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020 - Emre Şahin </p>
+</form>

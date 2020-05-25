@@ -1,0 +1,48 @@
+﻿@model TargetAddDto
+@{
+    ViewData["Title"] = "Insert - Target";
+    Layout = "~/Areas/Administrator/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="w-75 mx-auto p-3 mt-4 shadow" method="post" asp-action="Insert" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Url"></label>
+        <span asp-validation-for="Url" class="text-danger"></span>
+        <input asp-for="Url" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Start Of Period </label>
+                    @Html.EditorFor(model => model.StartOfPeriod, new { htmlAttributes = new { @class = "form-control my-date-start" } })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>End Of Period </label>
+                    @Html.EditorFor(model => model.EndOfPeriod, new { htmlAttributes = new { @class = "form-control my-date-end" } })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1" asp-for="IsWork" checked="">
+            <label class="custom-control-label" for="customCheck1">Automatic Work ?</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-info btn-sm">Insert</button>
+</form>
+
+@section JavaScript
+{
+    <script src="~/lib/jquery/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery/jquery-validate/jquery.validate.unobtrusive.min.js"></script>
+}
+
