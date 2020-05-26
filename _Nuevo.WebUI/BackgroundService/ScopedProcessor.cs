@@ -56,6 +56,8 @@ namespace _Nuevo.WebUI.BackgroundService
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     statuLink.Code = ((int)response.StatusCode).ToString();
+                    if (statuLink.IsSendAnEmail == true)
+                        statuLink.IsSendAnEmail = false;
                 }
                 else
                 {
@@ -67,7 +69,6 @@ namespace _Nuevo.WebUI.BackgroundService
                     statuLink.Code = ((int)response.StatusCode).ToString();
                     statuLink.IsSendAnEmail = true;
                 }
-                statuLink.IsSendAnEmail = false;
             }
             catch (Exception e)
             {

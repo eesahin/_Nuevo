@@ -43,3 +43,6 @@
 2020-05-26 02:43:19.7426 INFO TargetController | Added New Target : Codebeautify
 2020-05-26 02:47:23.1381 INFO TargetController | Added New Target : Youtube
 2020-05-26 02:47:43.2592 INFO TargetController | Added New Target : Netflix
+2020-05-26 03:00:34.6820 INFO TargetController | Added New Target : Test Hata
+2020-05-26 03:03:29.5834 INFO Updated Target : Test Hata
+2020-05-26 03:04:06.3767 INFO Updated Target : Test Hata
